@@ -207,3 +207,14 @@ footer {
     margin-top: 10px; /* 若需要額外下移可調整這裡 */
 }
 
+.modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.carousel-inner img {
+    object-fit: cover;
+    height: 500px; /* 可根據需要調整圖片高度 */
+}
+
