@@ -219,15 +219,14 @@ footer {
 }
 
 /* Branding Header */
+/* 嘗試簡單的背景圖片設置 */
 .branding-header {
     background-image: url('./img/branding 2.jpg'); /* 背景圖片 */
     background-size: cover; /* 讓圖片填滿整個區塊 */
     background-position: center; /* 確保圖片居中 */
-    color: #fff; /* 文字顏色為白色 */
-    text-align: center;
-    padding: 100px 0; /* 設置適當的上下內邊距 */
-    position: relative; /* 讓遮罩層覆蓋圖片 */
+    height: 400px; /* 設定高度來確保背景圖片可見 */
 }
+
 
 .branding-header::before {
     content: ''; /* 空的內容 */
