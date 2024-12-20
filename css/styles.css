@@ -244,14 +244,27 @@ footer {
     overflow-y: auto; /* 當內容超過容器時顯示垂直滾動條 */
 }
 
-/* 在 modal 中使圖片支持更大的顯示 */
-.modal-body img {
-    width: 100%; /* 確保圖片寬度為 100% */
-    height: auto; /* 高度自動，保持比例 */
-    margin-bottom: 20px; /* 讓圖片間隔更寬 */
+/* 讓 Modal 的內容區域支持滾動 */
+.modal-body {
+    max-height: 80vh; /* 限制 modal 最大高度為視窗的 80% */
+    overflow-y: auto; /* 開啟垂直滾動條 */
+    padding-right: 0; /* 去除 modal 內部的右側邊距 */
 }
 
-/* 控制圖片不會變形 */
+/* 保證每張圖片都以 100% 寬度顯示並保持比例 */
 .modal-body img {
-    object-fit: contain; /* 保持圖片比例，並使其適應容器 */
+    width: 100%; /* 圖片寬度占據容器的 100% */
+    height: auto; /* 高度自動，保持比例 */
+    margin-bottom: 20px; /* 圖片間的間距 */
+    object-fit: contain; /* 保持圖片比例，並適應容器 */
 }
+
+/* 調整圖片的垂直排列效果 */
+.modal-body .row {
+    display: block; /* 強制圖片垂直排列 */
+}
+
+.modal-body .col-md-4 {
+    margin-bottom: 20px; /* 圖片間的空隙 */
+}
+
