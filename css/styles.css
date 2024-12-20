@@ -193,3 +193,17 @@ footer {
     padding: 10px 0;
     margin-top: 20px;
 }
+
+/* 設定 container 的樣式 */
+#design-elements .row {
+    align-items: center; /* 確保兩側內容垂直居中對齊 */
+}
+
+/* 微調右側文字位置 */
+#design-elements .col-md-6:last-child {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: flex-start; /* 保持左對齊 */
+    margin-top: 10px; /* 若需要額外下移可調整這裡 */
+}
+
