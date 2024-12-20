@@ -69,22 +69,25 @@
 
     <!-- 模態框 (Modal) -->
     <!-- 作品1 -->
-    <div class="modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-body d-flex">
-                    <img src="./img/poster 1.jpg" alt="作品1" class="img-fluid me-4">
-                    <div>
-                        <h5>作品1名稱</h5>
-                        <p>這是作品1的理念描述，介紹設計背後的想法與過程。</p>
-                    </div>
+<div class="modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body d-flex">
+                <!-- 左側圖片 -->
+                <img src="./img/poster 1.jpg" alt="作品1" class="img-fluid me-4" style="max-width: 50%; height: auto;">
+                <!-- 右側描述 -->
+                <div class="p-3" style="background-color: rgba(255, 255, 255, 0.9); width: 50%; border-radius: 8px;">
+                    <h5>作品1名稱</h5>
+                    <p>這是作品1的理念描述，介紹設計背後的想法與過程。</p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
             </div>
         </div>
     </div>
+</div>
+
 
     <!-- 作品2 -->
     <div class="modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2Label" aria-hidden="true">
