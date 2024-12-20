@@ -1,12 +1,3 @@
-.hover-effect {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hover-effect:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
 /* 全域樣式 */
 body {
     font-family: Arial, sans-serif;
@@ -40,62 +31,14 @@ body {
 }
 
 /* 導航列樣式 */
-.navbar-brand img {
-    height: 80px; /* Logo 高度 */
-    width: auto;
-}
-
-.nav-link {
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #bada55; /* 黃綠色 */
-}
-
-
-/* Portfolio 區域 */
-#portfolio-section {
-    padding: 50px 0px;
-    background-color: #ffffff;
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.portfolio-item {
-    overflow: hidden;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.portfolio-item img {
-    width: 100%;
-    display: block;
-    object-fit: cover; /* 確保圖片保持比例填充 */
-    max-height: 300px; /* 設定圖片最大高度 */
-}
-
-.portfolio-item:hover {
-    transform: scale(1.05);
-}
-
-/* Footer 樣式 */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-}
-
-/* 自定義導航列樣式 */
 .navbar {
     background-color: #fff; /* 白色背景 */
     padding: 10px 0;
+}
+
+.navbar-brand img {
+    height: 80px; /* Logo 高度 */
+    width: auto;
 }
 
 .navbar-nav {
@@ -124,7 +67,7 @@ footer {
 
 .navbar-nav a {
     text-decoration: none;
-    color: #ffffff; /* 修改為白色 */
+    color: #333; /* 預設顏色 */
     font-size: 1.2rem;
     font-weight: 400;
     transition: color 0.3s;
@@ -134,25 +77,41 @@ footer {
     color: #bada55; /* 滑鼠懸停效果 */
 }
 
-/* 讓 nav bar 內容靠右對齊 */
-.navbar .container {
-    display: flex;
-    justify-content: flex-end; /* 將所有內容推到右側 */
+/* Portfolio 區域 */
+#portfolio-section {
+    padding: 50px 0;
+    background-color: #ffffff;
 }
 
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 三欄排列 */
+    gap: 20px;
+}
 
+.portfolio-item {
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-/* 圖片的處理 */
-.carousel-item img {
-    width: 100%;  /* 圖片寬度為 100% */
-    max-height: 100vh; /* 最大高度設為視口高度，避免圖片過大 */
-    object-fit: cover;  /* 保持圖片比例並填滿容器 */
-    object-position: center;  /* 圖片居中顯示 */
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* 確保圖片比例不變 */
+    max-height: 300px; /* 設定圖片最大高度 */
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Branding Header */
 .branding-header {
     background: linear-gradient(to bottom right, #333, #555);
+    color: #fff;
+    text-align: center;
     padding: 50px 0;
 }
 
@@ -165,15 +124,19 @@ footer {
     font-size: 1.2rem;
     margin-top: 10px;
 }
+
+/* Branding Card */
 .branding-card {
-    height: 400px; /* 統一高度 */
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 400px; /* 統一高度 */
     background: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .branding-card img {
@@ -199,9 +162,34 @@ footer {
     margin-bottom: 15px;
 }
 
-/* Design Elements */
+/* 圖片與其他設計元素 */
 #design-elements img {
     border-radius: 10px;
 }
 
+/* 圖片輪播 (Carousel) */
+.carousel-item img {
+    width: 100%; /* 圖片寬度為 100% */
+    max-height: 100vh; /* 最大高度設為視口高度 */
+    object-fit: cover; /* 保持圖片比例並填滿容器 */
+    object-position: center; /* 圖片居中顯示 */
+}
 
+/* 滑鼠懸停效果的統一處理 */
+.hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer 樣式 */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
