@@ -268,3 +268,79 @@ footer {
     margin-bottom: 20px; /* 圖片間的空隙 */
 }
 
+
+/* 全站樣式 */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* 頂部標題 */
+.branding-header {
+    background-color: #333;
+    padding: 2rem 0;
+}
+
+.branding-header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.branding-header .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+/* 作品區塊 */
+#branding-gallery .branding-card {
+    text-align: center;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#branding-gallery .branding-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+#branding-gallery .branding-card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.25rem;
+}
+
+#branding-gallery .branding-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Modal 樣式 */
+.modal-fullscreen {
+    margin: 0;
+}
+
+.modal-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.modal-body img {
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.modal-header, .modal-footer {
+    background-color: #fff;
+    border: none;
+}
