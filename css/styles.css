@@ -150,5 +150,56 @@ footer {
     object-position: center;  /* 圖片居中顯示 */
 }
 
+/* Branding Header */
+.branding-header {
+    background: linear-gradient(to bottom right, #333, #555);
+    padding: 50px 0;
+}
+
+.branding-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.branding-header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Branding Card */
+.branding-card {
+    position: relative;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.branding-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.branding-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.branding-info h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.branding-info p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #666;
+}
+
+/* Design Elements */
+#design-elements img {
+    border-radius: 10px;
+}
 
 

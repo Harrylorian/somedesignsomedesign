@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>平面設計作品 - 三畝設計</title>
+    <title>品牌識別作品 - 三畝設計</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 </head>
@@ -19,9 +19,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="./index.html">首頁</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="graphicdesign.html">平面設計</a></li>
-                    <li class="nav-item"><a class="nav-link" href="branding.html">品牌識別</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
+                    <li class="nav-item"><a class="nav-link" href="graphicdesign.html">平面設計</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="branding.html">品牌識別</a></li>
                     <li class="nav-item"><a class="nav-link" href="animation.html">動畫作品</a></li>
                     <li class="nav-item"><a class="nav-link" href="3d.html">3D作品</a></li>
                 </ul>
@@ -29,197 +29,75 @@
         </div>
     </nav>
 
-    <!-- 平面設計作品區域 -->
-    <section id="portfolio-section" class="container mt-5">
-        <h2 class="text-center mb-5">平面設計作品</h2>
-        <div class="row g-4">
-            <!-- 每個作品項目 -->
-            <div class="col-md-4">
-                <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                    <img src="./img/poster 1.jpg" alt="作品1" class="img-fluid">
+    <!-- 主區塊 -->
+    <header class="branding-header text-center text-white">
+        <h1>品牌識別作品</h1>
+        <p class="lead">用設計講述品牌故事，為品牌注入生命力</p>
+    </header>
+
+    <!-- 品牌故事 -->
+    <section id="branding-story" class="container my-5">
+        <h2 class="text-center mb-4">品牌故事</h2>
+        <p class="text-center">每一個品牌的設計背後，都有一段獨特的故事，讓設計與品牌精神完美結合。</p>
+    </section>
+
+    <!-- 作品展示區 -->
+    <section id="branding-gallery" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">作品展示</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="branding-card">
+                        <img src="./img/branding1.jpg" class="img-fluid" alt="品牌1">
+                        <div class="branding-info">
+                            <h3>品牌名稱 1</h3>
+                            <p>簡短的品牌理念描述。</p>
+                            <button class="btn btn-dark btn-sm mt-2">了解更多</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                    <img src="./img/poster 2.jpg" alt="作品2" class="img-fluid">
+                <div class="col-md-4">
+                    <div class="branding-card">
+                        <img src="./img/branding2.jpg" class="img-fluid" alt="品牌2">
+                        <div class="branding-info">
+                            <h3>品牌名稱 2</h3>
+                            <p>簡短的品牌理念描述。</p>
+                            <button class="btn btn-dark btn-sm mt-2">了解更多</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                    <img src="./img/poster 3.jpg" alt="作品3" class="img-fluid">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-                    <img src="./img/poster 5.jpg" alt="作品4" class="img-fluid">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-                    <img src="./img/poster 6.jpg" alt="作品5" class="img-fluid">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
-                    <img src="./img/成語_痛不欲生.jpg" alt="作品6" class="img-fluid">
+                <div class="col-md-4">
+                    <div class="branding-card">
+                        <img src="./img/branding3.jpg" class="img-fluid" alt="品牌3">
+                        <div class="branding-info">
+                            <h3>品牌名稱 3</h3>
+                            <p>簡短的品牌理念描述。</p>
+                            <button class="btn btn-dark btn-sm mt-2">了解更多</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 模態框 (Modal) -->
-    <!-- 作品1 -->
-    <div class="modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-        <div class="modal-dialog modal-xl"> <!-- 使用更大的模態框 -->
-            <div class="modal-content">
-                <div class="modal-body d-flex">
-                    <!-- 左側圖片 -->
-                    <div style="flex: 70%; display: flex; justify-content: center; align-items: center;">
-                        <img src="./img/poster 1.jpg" alt="作品2" class="img-fluid" style="max-width: 100%; height: auto;">
-                    </div>
-                    <!-- 右側描述 -->
-                    <div style="flex: 30%; padding: 20px; background-color: rgba(255, 255, 255, 0.9); border-radius: 8px;">
-                        <h5>作品名稱：一卷紙，十年樹</h5>
-                        <p>這件作品探索虛實之間的界線，運用科技與藝術的交融，展現人類對真實與夢想的思考。</p>
-                        <p>理念：以沉浸式的視覺體驗帶領觀者進入一個虛實交織的世界，讓人重新審視現實。</p>
-                    </div>
+    <!-- 設計元素解析 -->
+    <section id="design-elements" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">設計元素解析</h2>
+            <p class="text-center">深入了解每個品牌設計的細節與靈感來源。</p>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <img src="./img/logo-analysis.jpg" class="img-fluid" alt="Logo 解析">
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                <div class="col-md-6">
+                    <p>這裡是設計師對於品牌 Logo 設計的解析文字，包括顏色、字體、排版的選擇背後的邏輯與想法。</p>
                 </div>
             </div>
         </div>
-    </div>
-
-
-    <!-- 作品2 -->
-<div class="modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2Label" aria-hidden="true">
-    <div class="modal-dialog modal-xl"> <!-- 使用更大的模態框 -->
-        <div class="modal-content">
-            <div class="modal-body d-flex">
-                <!-- 左側圖片 -->
-                <div style="flex: 70%; display: flex; justify-content: center; align-items: center;">
-                    <img src="./img/poster 2.jpg" alt="作品2" class="img-fluid" style="max-width: 100%; height: auto;">
-                </div>
-                <!-- 右側描述 -->
-                <div style="flex: 30%; padding: 20px; background-color: rgba(255, 255, 255, 0.9); border-radius: 8px;">
-                    <h5>作品名稱：現實難辨</h5>
-                    <p>這件作品探索虛實之間的界線，運用科技與藝術的交融，展現人類對真實與夢想的思考。</p>
-                    <p>理念：以沉浸式的視覺體驗帶領觀者進入一個虛實交織的世界，讓人重新審視現實。</p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            </div>
-        </div>
-    </div>
-</div>
-
- <!-- 作品3 -->
- <div class="modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3Label" aria-hidden="true">
-    <div class="modal-dialog modal-xl"> <!-- 使用更大的模態框 -->
-        <div class="modal-content">
-            <div class="modal-body d-flex">
-                <!-- 左側圖片 -->
-                <div style="flex: 70%; display: flex; justify-content: center; align-items: center;">
-                    <img src="./img/poster 3.jpg" alt="作品2" class="img-fluid" style="max-width: 100%; height: auto;">
-                </div>
-                <!-- 右側描述 -->
-                <div style="flex: 30%; padding: 20px; background-color: rgba(255, 255, 255, 0.9); border-radius: 8px;">
-                    <h5>作品名稱：現實難辨</h5>
-                    <p>這件作品探索虛實之間的界線，運用科技與藝術的交融，展現人類對真實與夢想的思考。</p>
-                    <p>理念：以沉浸式的視覺體驗帶領觀者進入一個虛實交織的世界，讓人重新審視現實。</p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<!-- 作品4 -->
-<div class="modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4Label" aria-hidden="true">
-    <div class="modal-dialog modal-xl"> <!-- 使用更大的模態框 -->
-        <div class="modal-content">
-            <div class="modal-body d-flex">
-                <!-- 左側圖片 -->
-                <div style="flex: 70%; display: flex; justify-content: center; align-items: center;">
-                    <img src="./img/poster 5.jpg" alt="作品2" class="img-fluid" style="max-width: 100%; height: auto;">
-                </div>
-                <!-- 右側描述 -->
-                <div style="flex: 30%; padding: 20px; background-color: rgba(255, 255, 255, 0.9); border-radius: 8px;">
-                    <h5>作品名稱：現實難辨</h5>
-                    <p>這件作品探索虛實之間的界線，運用科技與藝術的交融，展現人類對真實與夢想的思考。</p>
-                    <p>理念：以沉浸式的視覺體驗帶領觀者進入一個虛實交織的世界，讓人重新審視現實。</p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- 作品5 -->
-<div class="modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5Label" aria-hidden="true">
-    <div class="modal-dialog modal-xl"> <!-- 使用更大的模態框 -->
-        <div class="modal-content">
-            <div class="modal-body d-flex">
-                <!-- 左側圖片 -->
-                <div style="flex: 70%; display: flex; justify-content: center; align-items: center;">
-                    <img src="./img/poster 6.jpg" alt="作品2" class="img-fluid" style="max-width: 100%; height: auto;">
-                </div>
-                <!-- 右側描述 -->
-                <div style="flex: 30%; padding: 20px; background-color: rgba(255, 255, 255, 0.9); border-radius: 8px;">
-                    <h5>作品名稱：現實難辨</h5>
-                    <p>這件作品探索虛實之間的界線，運用科技與藝術的交融，展現人類對真實與夢想的思考。</p>
-                    <p>理念：以沉浸式的視覺體驗帶領觀者進入一個虛實交織的世界，讓人重新審視現實。</p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- 作品6 -->
-<div class="modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6Label" aria-hidden="true">
-    <div class="modal-dialog modal-xl"> <!-- 使用更大的模態框 -->
-        <div class="modal-content">
-            <div class="modal-body d-flex">
-                <!-- 左側圖片 -->
-                <div style="flex: 70%; display: flex; justify-content: center; align-items: center;">
-                    <img src="./img/成語_痛不欲生.jpg" alt="作品2" class="img-fluid" style="max-width: 100%; height: auto;">
-                </div>
-                <!-- 右側描述 -->
-                <div style="flex: 30%; padding: 20px; background-color: rgba(255, 255, 255, 0.9); border-radius: 8px;">
-                    <h5>作品名稱：現實難辨</h5>
-                    <p>這件作品探索虛實之間的界線，運用科技與藝術的交融，展現人類對真實與夢想的思考。</p>
-                    <p>理念：以沉浸式的視覺體驗帶領觀者進入一個虛實交織的世界，讓人重新審視現實。</p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <!-- 為每個作品重複添加 Modal (請記得替換圖片與內容) -->
+    </section>
 
     <!-- Footer -->
-    <footer class="text-center py-4">
+    <footer class="text-center py-4 bg-dark text-white">
         <p>&copy; 2024 三畝設計. 保留所有權利。</p>
     </footer>
 
