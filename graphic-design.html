@@ -11,7 +11,7 @@
     <!-- 導航列 -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"> <!-- 點擊Logo回首頁 -->
+            <a class="navbar-brand" href="index.html">
                 <img src="./img/logo.png" alt="三畝設計 Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,10 +19,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./index.html">首頁</a> <!-- 點擊返回首頁 -->
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="graphicdesign.html">平面設計</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html">首頁</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="graphicdesign.html">平面設計</a></li>
                     <li class="nav-item"><a class="nav-link" href="branding.html">品牌識別</a></li>
                     <li class="nav-item"><a class="nav-link" href="animation.html">動畫作品</a></li>
                     <li class="nav-item"><a class="nav-link" href="3d.html">3D作品</a></li>
@@ -34,29 +32,79 @@
     <!-- 平面設計作品區域 -->
     <section id="portfolio-section" class="container mt-5">
         <h2 class="text-center mb-5">平面設計作品</h2>
-        
-        <!-- 作品展示 -->
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src="./img/poster 1.jpg" alt="作品1" class="img-fluid">
+        <div class="row g-4">
+            <!-- 每個作品項目 -->
+            <div class="col-md-4">
+                <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                    <img src="./img/poster 1.jpg" alt="作品1" class="img-fluid">
+                </div>
             </div>
-            <div class="portfolio-item">
-                <img src="./img/poster 2.jpg" alt="作品2" class="img-fluid">
+            <div class="col-md-4">
+                <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                    <img src="./img/poster 2.jpg" alt="作品2" class="img-fluid">
+                </div>
             </div>
-            <div class="portfolio-item">
-                <img src="./img/poster 3.jpg" alt="作品3" class="img-fluid">
+            <div class="col-md-4">
+                <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                    <img src="./img/poster 3.jpg" alt="作品3" class="img-fluid">
+                </div>
             </div>
-            <div class="portfolio-item">
-                <img src="./img/poster 5.jpg" alt="作品4" class="img-fluid">
+            <div class="col-md-4">
+                <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                    <img src="./img/poster 5.jpg" alt="作品4" class="img-fluid">
+                </div>
             </div>
-            <div class="portfolio-item">
-                <img src="./img/poster 6.jpg" alt="作品5" class="img-fluid">
+            <div class="col-md-4">
+                <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+                    <img src="./img/poster 6.jpg" alt="作品5" class="img-fluid">
+                </div>
             </div>
-            <div class="portfolio-item">
-                <img src="./img/成語_痛不欲生.jpg" alt="作品6" class="img-fluid">
+            <div class="col-md-4">
+                <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+                    <img src="./img/成語_痛不欲生.jpg" alt="作品6" class="img-fluid">
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- 模態框 (Modal) -->
+    <!-- 作品1 -->
+    <div class="modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body d-flex">
+                    <img src="./img/poster 1.jpg" alt="作品1" class="img-fluid me-4">
+                    <div>
+                        <h5>作品1名稱</h5>
+                        <p>這是作品1的理念描述，介紹設計背後的想法與過程。</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 作品2 -->
+    <div class="modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body d-flex">
+                    <img src="./img/poster 2.jpg" alt="作品2" class="img-fluid me-4">
+                    <div>
+                        <h5>作品2名稱</h5>
+                        <p>這是作品2的理念描述，介紹設計背後的想法與過程。</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 為每個作品重複添加 Modal (請記得替換圖片與內容) -->
 
     <!-- Footer -->
     <footer class="text-center py-4">
