@@ -52,7 +52,8 @@
                         <div class="branding-info">
                             <h3>品牌名稱 1</h3>
                             <p>簡短的品牌理念描述。</p>
-                            <button class="btn btn-dark btn-sm mt-2">了解更多</button>
+                            <!-- 觸發 Modal 的按鈕 -->
+                            <button class="btn btn-dark btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#brandingModal1">了解更多</button>
                         </div>
                     </div>
                 </div>
@@ -62,7 +63,8 @@
                         <div class="branding-info">
                             <h3>品牌名稱 2</h3>
                             <p>簡短的品牌理念描述。</p>
-                            <button class="btn btn-dark btn-sm mt-2">了解更多</button>
+                            <!-- 觸發 Modal 的按鈕 -->
+                            <button class="btn btn-dark btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#brandingModal2">了解更多</button>
                         </div>
                     </div>
                 </div>
@@ -72,7 +74,8 @@
                         <div class="branding-info">
                             <h3>品牌名稱 3</h3>
                             <p>簡短的品牌理念描述。</p>
-                            <button class="btn btn-dark btn-sm mt-2">了解更多</button>
+                            <!-- 觸發 Modal 的按鈕 -->
+                            <button class="btn btn-dark btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#brandingModal3">了解更多</button>
                         </div>
                     </div>
                 </div>
@@ -80,25 +83,89 @@
         </div>
     </section>
 
-    
-
-    <!-- 設計元素解析 -->
-    <section id="design-elements" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Logo分析</h2>
-            <p class="text-center">設計元素的解析意涵</p>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <img src="./img/logo 2.png" class="img-fluid" alt="Logo 解析">
+    <!-- 品牌1 Modal -->
+    <div class="modal fade" id="brandingModal1" tabindex="-1" aria-labelledby="brandingModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="brandingModalLabel1">品牌名稱 1 詳細介紹</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="col-md-6">
-                    <p>字體的選擇突出了品牌的核心價值——簡約、穩重且現代。
-                        運用了傳統字形結構的基礎，同時融合現代設計語彙，使品牌形象既有文化內涵，也能傳遞國際化的視覺美感。
-                    </p>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="./img/branding 1.jpg" class="img-fluid" alt="圖片1">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="./img/branding 2.jpg" class="img-fluid" alt="圖片2">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="./img/branding 3.jpg" class="img-fluid" alt="圖片3">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- 品牌2 Modal -->
+    <div class="modal fade" id="brandingModal2" tabindex="-1" aria-labelledby="brandingModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="brandingModalLabel2">品牌名稱 2 詳細介紹</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="./img/branding 4.jpg" class="img-fluid" alt="圖片4">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="./img/branding 5.jpg" class="img-fluid" alt="圖片5">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="./img/branding 6.jpg" class="img-fluid" alt="圖片6">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 品牌3 Modal -->
+    <div class="modal fade" id="brandingModal3" tabindex="-1" aria-labelledby="brandingModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="brandingModalLabel3">品牌名稱 3 詳細介紹</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="./img/branding 7.jpg" class="img-fluid" alt="圖片7">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="./img/branding 8.jpg" class="img-fluid" alt="圖片8">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="./img/branding 9.jpg" class="img-fluid" alt="圖片9">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="text-center py-4 bg-dark text-white">
