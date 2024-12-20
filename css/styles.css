@@ -166,9 +166,12 @@ footer {
     margin-top: 10px;
 }
 
-/* Branding Card */
+
 .branding-card {
-    position: relative;
+    height: 400px; /* 統一高度 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -177,8 +180,8 @@ footer {
 
 .branding-card img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 50%; /* 圖片占一半空間 */
+    object-fit: cover;
 }
 
 .branding-info {
@@ -189,12 +192,13 @@ footer {
 .branding-info h3 {
     font-size: 1.2rem;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .branding-info p {
     font-size: 0.9rem;
-    margin-top: 10px;
     color: #666;
+    margin-bottom: 15px;
 }
 
 /* Design Elements */
