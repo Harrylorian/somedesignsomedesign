@@ -352,3 +352,73 @@ body {
         flex: 1 1 100%; /* 小屏幕下每行只顯示一張圖片 */
     }
 }
+
+/* 動畫作品區域 */
+.animation-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animation-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.animation-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.animation-item img:hover {
+    transform: scale(1.1);
+}
+
+.animation-info {
+    margin-left: 20px;
+}
+
+.animation-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.animation-description {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* 動畫作品區域的容器 */
+#animation-gallery {
+    padding: 50px 0;
+}
+
+#animation-gallery .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* 自適應樣式 */
+@media (max-width: 768px) {
+    .animation-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .animation-item img {
+        margin-bottom: 10px;
+    }
+
+    .animation-info {
+        margin-left: 0;
+    }
+}
