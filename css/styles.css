@@ -67,7 +67,7 @@ body {
 
 .navbar-nav a {
     text-decoration: none;
-    color: #333; /* 預設顏色 */
+    color: #00d9ff; /* 預設顏色 */
     font-size: 1.2rem;
     font-weight: 400;
     transition: color 0.3s;
