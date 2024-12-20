@@ -7,26 +7,69 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <style>
-        /* 額外樣式 */
-        .animation-item img {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .animation-item img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        /* 動畫作品的區塊樣式 */
+        .animation-item {
+            display: flex;
+            flex-direction: row; /* 左右排列 */
+            align-items: center;
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
         }
 
-        /* 動畫作品區域 */
-        .animation-info {
-            padding-left: 20px;
+        .animation-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
+
+        /* 縮圖樣式 */
+        .animation-item img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover; /* 保持圖片比例，填滿容器 */
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        /* 標題樣式 */
         .animation-title {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             font-weight: bold;
+            margin-bottom: 10px;
         }
+
+        /* 作品描述 */
         .animation-description {
             font-size: 1rem;
             color: #555;
+            line-height: 1.5;
+        }
+
+        /* 優化響應式設計 */
+        @media (max-width: 768px) {
+            .animation-item {
+                flex-direction: column; /* 小屏幕時讓內容上下排列 */
+                align-items: flex-start;
+            }
+
+            .animation-item img {
+                width: 100%; /* 圖片寬度適應小屏幕 */
+                height: auto; /* 高度自適應 */
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            .animation-title {
+                font-size: 1.3rem;
+            }
+
+            .animation-description {
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
@@ -36,7 +79,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-                <img src="./img/logo.png" alt="三畝設計 Logo">
+                <img src="./img/logo.png" alt="三畝設計 Logo" height="40">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -54,7 +97,7 @@
     </nav>
 
     <!-- 主區塊 -->
-    <header class="branding-header text-center text-white">
+    <header class="branding-header text-center text-white py-5">
         <h1>動畫作品</h1>
         <p class="lead">精心創作的動畫作品，呈現動態設計的魅力。</p>
     </header>
@@ -62,86 +105,53 @@
     <!-- 動畫作品展示區 -->
     <section id="animation-gallery" class="container py-5">
         <h2 class="text-center mb-4">動畫作品集</h2>
-        <div class="row g-4">
-            <!-- 動畫作品 1 -->
-            <article class="col-md-4">
-                <div class="animation-item d-flex align-items-center">
-                    <a href="https://www.youtube.com/watch?v=GYLEvtx0SyM" target="_blank" class="youtube-icon">
-                        <img src="./img/youtube1.png" alt="YouTube" class="img-fluid">
-                    </a>
-                    <div class="animation-info ms-3">
-                        <h3 class="animation-title">動畫作品 1 標題</h3>
-                        <p class="animation-description">這是動畫作品 1 的理念簡介，描述作品的背景與創作意圖。</p>
-                    </div>
-                </div>
-            </article>
 
-            <!-- 動畫作品 2 -->
-            <article class="col-md-4">
-                <div class="animation-item d-flex align-items-center">
-                    <a href="https://www.youtube.com/watch?v=影片ID2" target="_blank" class="youtube-icon">
-                        <img src="./img/youtube2.png" alt="YouTube" class="img-fluid">
-                    </a>
-                    <div class="animation-info ms-3">
-                        <h3 class="animation-title">動畫作品 2 標題</h3>
-                        <p class="animation-description">這是動畫作品 2 的理念簡介，描述作品的背景與創作意圖。</p>
-                    </div>
-                </div>
-            </article>
+        <!-- 動畫作品 1 -->
+        <article class="animation-item">
+            <a href="https://www.youtube.com/watch?v=GYLEvtx0SyM" target="_blank">
+                <img src="./img/youtube1.png" alt="YouTube">
+            </a>
+            <div class="animation-info">
+                <h3 class="animation-title">01 後遺"正"</h3>
+                <p class="animation-description">後遺“正”是一部獨特而深刻的動畫，以幾何形狀為藍本，敘述一個原本圓形的世界逐漸與周遭正方形環境相遇的過程。</p>
+            </div>
+        </article>
 
-            <!-- 動畫作品 3 -->
-            <article class="col-md-4">
-                <div class="animation-item d-flex align-items-center">
-                    <a href="https://www.youtube.com/watch?v=影片ID3" target="_blank" class="youtube-icon">
-                        <img src="./img/youtube3.png" alt="YouTube" class="img-fluid">
-                    </a>
-                    <div class="animation-info ms-3">
-                        <h3 class="animation-title">動畫作品 3 標題</h3>
-                        <p class="animation-description">這是動畫作品 3 的理念簡介，描述作品的背景與創作意圖。</p>
-                    </div>
-                </div>
-            </article>
+        <!-- 動畫作品 2 -->
+        <article class="animation-item">
+            <a href="https://www.youtube.com/watch?v=lpnstffiaME" target="_blank">
+                <img src="./img/youtube2.png" alt="YouTube">
+            </a>
+            <div class="animation-info">
+                <h3 class="animation-title">02 接種疫苗·守護社區健康</h3>
+                <p class="animation-description">此動畫作品提醒觀眾每一個接種疫苗的選擇都是守護社區健康的一份貢獻，共同打造一個抵禦疾病侵襲的堅固防線。</p>
+            </div>
+        </article>
 
-            <!-- 動畫作品 4 -->
-            <article class="col-md-4">
-                <div class="animation-item d-flex align-items-center">
-                    <a href="https://www.youtube.com/watch?v=影片ID4" target="_blank" class="youtube-icon">
-                        <img src="./img/youtube4.png" alt="YouTube" class="img-fluid">
-                    </a>
-                    <div class="animation-info ms-3">
-                        <h3 class="animation-title">動畫作品 4 標題</h3>
-                        <p class="animation-description">這是動畫作品 4 的理念簡介，描述作品的背景與創作意圖。</p>
-                    </div>
-                </div>
-            </article>
+        <!-- 動畫作品 3 -->
+        <article class="animation-item">
+            <a href="https://www.youtube.com/watch?v=3OEnJjGqLYk" target="_blank">
+                <img src="./img/youtube3.png" alt="YouTube">
+            </a>
+            <div class="animation-info">
+                <h3 class="animation-title">03 白日夢</h3>
+                <p class="animation-description">白日夢主要就是把太陽擬人化讓它也會發白日夢，落下地球經過春夏秋冬最後再醒來的故事。</p>
+            </div>
+        </article>
 
-            <!-- 動畫作品 5 -->
-            <article class="col-md-4">
-                <div class="animation-item d-flex align-items-center">
-                    <a href="https://www.youtube.com/watch?v=影片ID5" target="_blank" class="youtube-icon">
-                        <img src="./img/youtube5.png" alt="YouTube" class="img-fluid">
-                    </a>
-                    <div class="animation-info ms-3">
-                        <h3 class="animation-title">動畫作品 5 標題</h3>
-                        <p class="animation-description">這是動畫作品 5 的理念簡介，描述作品的背景與創作意圖。</p>
-                    </div>
-                </div>
-            </article>
+    
+        <!-- 可以繼續添加其他作品 -->
 
-            <!-- 動畫作品 6 -->
-            <article class="col-md-4">
-                <div class="animation-item d-flex align-items-center">
-                    <a href="https://www.youtube.com/watch?v=影片ID6" target="_blank" class="youtube-icon">
-                        <img src="./img/youtube6.png" alt="YouTube" class="img-fluid">
-                    </a>
-                    <div class="animation-info ms-3">
-                        <h3 class="animation-title">動畫作品 6 標題</h3>
-                        <p class="animation-description">這是動畫作品 6 的理念簡介，描述作品的背景與創作意圖。</p>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
+         <!-- 動畫作品 4 -->
+         <article class="animation-item">
+            <a href="https://www.youtube.com/watch?v=ipHcWwqHBOU&feature=youtu.be" target="_blank">
+                <img src="./img/youtube4.png" alt="YouTube">
+            </a>
+            <div class="animation-info">
+                <h3 class="animation-title">04 113學年度高雄師範大學招生影片</h3>
+                <p class="animation-description">高師大位於高雄市苓雅區，擁有5大學院。</p>
+            </div>
+        </article>
 
     <!-- Footer -->
     <footer class="text-center py-4 bg-dark text-white">
