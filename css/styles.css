@@ -407,6 +407,17 @@ body {
     justify-content: space-between;
 }
 
+.animation-header {
+    background-image: url('./img/youtube6.png'); /* 背景圖片 */
+    background-size: cover; /* 讓圖片填滿整個區塊 */
+    background-position: center; /* 確保圖片居中 */
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    position: relative; /* 確保遮罩層位置正確 */
+    height: 200px; /* 設定固定高度，避免延伸 */
+}
+
 /* 自適應樣式 */
 @media (max-width: 768px) {
     .animation-item {
