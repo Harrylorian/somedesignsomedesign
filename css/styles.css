@@ -316,31 +316,39 @@ body {
     color: #555;
 }
 
-/* Modal 樣式 */
-.modal-fullscreen {
-    margin: 0;
-}
-
-.modal-content {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
+/* Modal的圖片樣式 */
 .modal-body {
-    flex-grow: 1;
-    overflow-y: auto;
-    padding: 20px;
-    background-color: #f9f9f9;
+    max-height: 80vh; /* 限制最大高度為視窗的 80% */
+    overflow-y: auto; /* 開啟垂直滾動條 */
+    padding-right: 0; /* 去除 modal 內部的右側邊距 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* 圖片間的間隙 */
 }
 
 .modal-body img {
-    max-width: 100%;
-    margin-bottom: 20px;
-    border-radius: 8px;
+    width: 100%; /* 圖片寬度占據容器的 100% */
+    max-width: 800px; /* 限制最大寬度，使圖片不會過大 */
+    height: auto; /* 高度自動，保持比例 */
+    margin-bottom: 20px; /* 圖片間的間距 */
+    object-fit: cover; /* 保持圖片比例，並適應容器 */
 }
 
-.modal-header, .modal-footer {
-    background-color: #fff;
-    border: none;
+/* 確保每張圖片都占據相同的寬度 */
+.modal-body .col-md-4 {
+    flex: 1 1 100%; /* 強制每張圖片占據100%寬度 */
+    margin-bottom: 20px;
+}
+
+.modal-body .row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 575px) {
+    .modal-body .col-md-4 {
+        flex: 1 1 100%; /* 小屏幕下每行只顯示一張圖片 */
+    }
 }
