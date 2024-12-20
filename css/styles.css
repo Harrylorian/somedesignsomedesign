@@ -237,3 +237,21 @@ footer {
     object-fit: cover;
     height: 500px; /* 可根據需要調整圖片高度 */
 }
+
+/* Modal 的圖片容器 */
+.modal-body {
+    max-height: 70vh; /* 設置最大高度為視口高度的70% */
+    overflow-y: auto; /* 當內容超過容器時顯示垂直滾動條 */
+}
+
+/* 在 modal 中使圖片支持更大的顯示 */
+.modal-body img {
+    width: 100%; /* 確保圖片寬度為 100% */
+    height: auto; /* 高度自動，保持比例 */
+    margin-bottom: 20px; /* 讓圖片間隔更寬 */
+}
+
+/* 控制圖片不會變形 */
+.modal-body img {
+    object-fit: contain; /* 保持圖片比例，並使其適應容器 */
+}
