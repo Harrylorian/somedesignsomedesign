@@ -7,29 +7,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <style>
-        /* 讓modal內的圖片直式排列並且可以垂直滑動 */
-        .modal-body {
-            max-height: 80vh; /* 使模態框內的圖片高度限制為視口高度的80% */
-            overflow-y: auto; /* 允許垂直滾動 */
+        /* 額外樣式 */
+        .branding-card img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
-        .modal-body .row {
-            display: flex;
-            flex-direction: column; /* 使圖片垂直排列 */
-            gap: 20px; /* 設定圖片之間的間距 */
+        .branding-card img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
-        .modal-body .col-md-4 {
-            flex: 1;
-        }
-
+        /* Modal內圖片樣式 */
         .modal-body img {
-            width: 100%;
-            height: auto;
+            max-height: 400px;
             object-fit: cover;
         }
     </style>
 </head>
+
 <body>
     <!-- 導航列 -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -44,7 +38,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">首頁</a></li>
                     <li class="nav-item"><a class="nav-link" href="graphicdesign.html">平面設計</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="branding.html">品牌識別</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="branding.html" aria-current="page">品牌識別</a></li>
                     <li class="nav-item"><a class="nav-link" href="animation.html">動畫作品</a></li>
                     <li class="nav-item"><a class="nav-link" href="3d.html">3D作品</a></li>
                 </ul>
@@ -69,118 +63,69 @@
         <div class="container">
             <h2 class="text-center mb-4">作品展示</h2>
             <div class="row g-4">
-                <div class="col-md-4">
+                <article class="col-md-4">
                     <div class="branding-card">
-                        <img src="./img/branding 4.png" class="img-fluid" alt="品牌1">
+                        <img src="./img/03_新鑫員工證_方向2.jpg" class="img-fluid" alt="新鑫股份有限公司品牌設計" loading="lazy">
                         <div class="branding-info">
                             <h3>新鑫股份有限公司</h3>
                             <p>為貴公司設計一套完整版的主視覺衍生</p>
-                            <!-- 觸發 Modal 的按鈕 -->
-                            <button class="btn btn-dark btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#brandingModal1">了解更多</button>
+                            <button class="btn btn-dark btn-sm mt-2" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#brandingModal"
+                                    data-title="新鑫股份有限公司"
+                                    data-images="./img/02_掛旗.jpg,./img/03_新鑫員工證_方向2.jpg,./img/05_活動識別證_媒體記者.jpg">
+                                了解更多
+                            </button>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
+                </article>
+                <article class="col-md-4">
                     <div class="branding-card">
-                        <img src="./img/branding 5.jpg" class="img-fluid" alt="品牌2">
+                        <img src="./img/構夢展_mockup02.jpg" class="img-fluid" alt="高雄市內惟藝術中心 - 構夢展覽" loading="lazy">
                         <div class="branding-info">
                             <h3>高雄市內惟藝術中心 - 構夢展覽</h3>
                             <p>構夢展覽設計展場相關圖片。</p>
-                            <!-- 觸發 Modal 的按鈕 -->
-                            <button class="btn btn-dark btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#brandingModal2">了解更多</button>
+                            <button class="btn btn-dark btn-sm mt-2" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#brandingModal"
+                                    data-title="高雄市內惟藝術中心 - 構夢展覽"
+                                    data-images="./img/構夢展_mockup02.jpg,./img/構夢展_mockup03.jpg,./img/構夢展_mockup.jpg">
+                                了解更多
+                            </button>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
+                </article>
+                <article class="col-md-4">
                     <div class="branding-card">
-                        <img src="./img/branding 3.jpg" class="img-fluid" alt="品牌3">
+                        <img src="./img/Mockup_05_門票.jpg" class="img-fluid" alt="屏東可可園區品牌設計" loading="lazy">
                         <div class="branding-info">
                             <h3>屏東可可園區</h3>
                             <p>為屏東可可園區設計活動主視覺。</p>
-                            <!-- 觸發 Modal 的按鈕 -->
-                            <button class="btn btn-dark btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#brandingModal3">了解更多</button>
+                            <button class="btn btn-dark btn-sm mt-2" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#brandingModal"
+                                    data-title="屏東可可園區"
+                                    data-images="./img/Mockup_03_路燈旗子.jpg,./img/Mockup_05_打卡板.jpg,./img/Mockup_05_門票.jpg">
+                                了解更多
+                            </button>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- 品牌1 Modal -->
-    <div class="modal fade" id="brandingModal1" tabindex="-1" aria-labelledby="brandingModalLabel1" aria-hidden="true">
+    <!-- 通用 Modal -->
+    <div class="modal fade" id="brandingModal" tabindex="-1" aria-labelledby="brandingModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="brandingModalLabel1">新鑫股份有限公司</h5>
+                    <h5 class="modal-title" id="brandingModalLabel">標題</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="./img/02_掛旗.jpg" class="img-fluid" alt="圖片1">
-                        </div>
-                        <div class="col-md-4">
-                            <img src="./img/03_新鑫員工證_方向2.jpg" class="img-fluid" alt="圖片2">
-                        </div>
-                        <div class="col-md-4">
-                            <img src="./img/05_活動識別證_媒體記者.jpg" class="img-fluid" alt="圖片3">
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 品牌2 Modal -->
-    <div class="modal fade" id="brandingModal2" tabindex="-1" aria-labelledby="brandingModalLabel2" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="brandingModalLabel2">高雄市內惟藝術中心 - 構夢展覽</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="./img/構夢展_mockup02.jpg" class="img-fluid" alt="圖片4">
-                        </div>
-                        <div class="col-md-4">
-                            <img src="./img/構夢展_mockup03.jpg" class="img-fluid" alt="圖片5">
-                        </div>
-                        <div class="col-md-4">
-                            <img src="./img/構夢展_mockup.jpg" class="img-fluid" alt="圖片6">
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 品牌3 Modal -->
-    <div class="modal fade" id="brandingModal3" tabindex="-1" aria-labelledby="brandingModalLabel3" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="brandingModalLabel3">屏東可可園區</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="./img/Mockup_03_路燈旗子.jpg" class="img-fluid" alt="圖片7">
-                        </div>
-                        <div class="col-md-4">
-                            <img src="./img/Mockup_05_打卡板.jpg" class="img-fluid" alt="圖片8">
-                        </div>
-                        <div class="col-md-4">
-                            <img src="./img/Mockup_05_門票.jpg" class="img-fluid" alt="圖片9">
-                        </div>
+                    <div class="row" id="modal-body-content">
+                        <!-- 動態填充圖片 -->
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -196,5 +141,24 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 動態更新 Modal 內容
+        const modal = document.getElementById('brandingModal');
+        modal.addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget;
+            const title = button.getAttribute('data-title');
+            const images = button.getAttribute('data-images').split(',');
+
+            const modalTitle = modal.querySelector('.modal-title');
+            const modalBody = modal.querySelector('#modal-body-content');
+
+            modalTitle.textContent = title;
+            modalBody.innerHTML = images.slice(0, 3).map(imgSrc => `
+                <div class="col-12 col-md-4 mb-3">
+                    <img src="${imgSrc}" class="img-fluid" alt="${title}">
+                </div>
+            `).join('');
+        });
+    </script>
 </body>
 </html>
