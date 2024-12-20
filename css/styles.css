@@ -244,3 +244,4 @@ footer {
     position: relative; /* 讓文字顯示在遮罩層之上 */
     z-index: 2; /* 確保文字在遮罩層上 */
 }
+
