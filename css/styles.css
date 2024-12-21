@@ -440,7 +440,7 @@ body {
 }
 
 .carousel-inner img {
-    width: 100%; /* 讓圖片寬度充滿父容器 */
+    width: 80%; /* 讓圖片寬度充滿父容器 */
     height: auto; /* 高度自動調整，保持圖片比例 */
     object-fit: contain; /* 保持圖片完整顯示，避免拉伸 */
 }
