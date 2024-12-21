@@ -434,7 +434,8 @@ body {
     }
 }
 .logo {
-    max-height: 50px; /* 調整 Logo 的最大高度 */
-    height: auto;     /* 保持圖片比例 */
-    width: auto;      /* 保持圖片比例 */
+    max-height: 50px; /* 限制最大高度 */
+    height: auto;     /* 保持原始比例 */
+    width: auto;      /* 保持原始比例 */
 }
+
