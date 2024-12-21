@@ -433,9 +433,24 @@ body {
         margin-left: 0;
     }
 }
-.logo {
-    max-height: 50px; /* 限制最大高度 */
-    height: auto;     /* 保持原始比例 */
-    width: auto;      /* 保持原始比例 */
+
+.navbar-brand img {
+    max-width: 150px; /* 限制 logo 的最大寬度 */
+    height: auto;     /* 高度自動調整以保持比例 */
 }
 
+.carousel-inner img {
+    width: 100%; /* 讓圖片寬度充滿父容器 */
+    height: auto; /* 高度自動調整，保持圖片比例 */
+    object-fit: contain; /* 保持圖片完整顯示，避免拉伸 */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #888; /* 灰色 */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: invert(0%); /* 確保箭頭不會被反轉顏色 */
+}
