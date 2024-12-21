@@ -433,3 +433,8 @@ body {
         margin-left: 0;
     }
 }
+.logo {
+    max-height: 50px; /* 調整 Logo 的最大高度 */
+    height: auto;     /* 保持圖片比例 */
+    width: auto;      /* 保持圖片比例 */
+}
